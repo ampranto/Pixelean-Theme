@@ -20,6 +20,13 @@
     /* Match tailwind.config.js theme.extend */
     --radius-pill: 9999px;
     --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --breakpoint-xs: 600px;
+    --breakpoint-tab-sm: 601px;
+    --breakpoint-tab-lg: 768px;
+    /* এই লাইনটি অ্যাড করুন */
+    --breakpoint-md-screen: 992px;
+    --breakpoint-lg-screen: 1025px;
+    --breakpoint-xl-screen: 1441px;
 }
 
 @layer components {
@@ -42,4 +49,10 @@
     .nav-item {
         @apply inline-flex items-center justify-center gap-4 bg-black py-4 px-6 rounded-xl text-white;
     }
+
+    .banner-heading {
+        @apply text-banner-heading font-bold;
+    }
+
+
 }

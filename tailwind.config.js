@@ -8,6 +8,25 @@ module.exports = {
     "./src/front-page-entry.js",
   ],
   theme: {
+    screens: {
+      // Mobile: 0 to 600px (Default behavior)
+      // 'xs': { 'max': '600px' },
+      
+      // Tablet: 601px to 767px
+      'tab-sm': { 'min': '601px', 'max': '767px' },
+      
+      // Medium Screen: 768px to 991px
+      'tab-lg': { 'min': '768px', 'max': '991px' },
+      
+      // Large Screen: 992px to 1024px
+      'md-screen': { 'min': '992px', 'max': '1024px' },
+      
+      // Desktop: 1025px to 1440px
+      'lg-screen': { 'min': '1025px', 'max': '1440px' },
+      
+      // Wide Screen: 1441px to 1920px
+      'xl-screen': { 'min': '1441px'},
+    },
     extend: {
       // 1. Color System (Simplified names)
       colors: {
