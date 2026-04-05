@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+    /* Custom Colors */
+    --color-brand: #0248FF;
+    --color-brand-hover: #0248FF;
+
+    /* Custom Spacing */
+    --spacing-section: clamp(3rem, 6vw, 5rem);
+
+    /* Archivo from Google Fonts (linked in HTML <head>) */
+    --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
+    /* Fluid type (Tailwind v4: define here so text-* utilities exist) */
+    --text-banner-heading: clamp(2.5rem, 4vw + 1.25rem, 5.25rem);
+    --text-banner-heading--line-height: 1.1;
+    --text-section-heading: clamp(2rem, 3vw + 1rem, 4rem);
+    --text-section-heading--line-height: 1.2;
+    --text-body: 1rem;
+    --text-body--line-height: 1.5;
+    /* Match tailwind.config.js theme.extend */
+    --radius-pill: 9999px;
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@layer components {
+    .my-btn-primary {
+        @apply inline-flex items-center justify-center gap-4 bg-brand text-white px-4 py-3 border-2 border-brand rounded-lg no-underline transition-all duration-300 ease-smooth hover:bg-brand-hover active:scale-95 focus:outline-none focus:ring-4 focus:ring-brand/30;
+    }
+
+    .my-btn-secondary {
+        @apply inline-flex items-center justify-center gap-4 border-2 border-brand bg-white text-black px-4 py-3 rounded-lg no-underline transition-all duration-300 ease-smooth hover:bg-brand-hover active:scale-95 focus:outline-none focus:ring-4 focus:ring-brand/30;
+    }
+
+    .my-btn-primary-icon {
+        @apply p-2 rounded bg-white text-brand;
+    }
+
+    .my-btn-secondary-icon {
+        @apply p-2 rounded bg-brand text-white;
+    }
+
+    .nav-item {
+        @apply inline-flex items-center justify-center gap-4 bg-black py-4 px-6 rounded-xl text-white;
+    }
+}
