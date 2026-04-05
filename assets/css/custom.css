@@ -1,2 +1,30 @@
 @import url('_effects.css');
 @import url('animate.css');
+
+
+:root {
+    background-color: #F3F4F8;
+  }
+  
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* Custom Scrollbar for Premium Look */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+  }
+  
+  .banner-section {
+    background-image: url("../images/banner-bg.png");
+    background-position: start start;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }

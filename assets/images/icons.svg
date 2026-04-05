@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!--
+    Usage: <svg><use href="/assets/images/icons.svg#icon-arrow-up-right"/></svg>
+    Build output: dist/assets/images/icons.svg
+  -->
+  <symbol id="icon-arrow-up-right" viewBox="0 0 11 11" fill="none">
+    <path d="M0 0.833332H10V10.8333" stroke="currentColor" stroke-width="1.66667" />
+    <path d="M10 0.833332L0.833374 10" stroke="currentColor" stroke-width="1.66667" />
+  </symbol>
+</svg>
