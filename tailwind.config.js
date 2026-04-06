@@ -11,21 +11,21 @@ module.exports = {
     screens: {
       // Mobile: 0 to 600px (Default behavior)
       // 'xs': { 'max': '600px' },
-      
+
       // Tablet: 601px to 767px
       'tab-sm': { 'min': '601px', 'max': '767px' },
-      
+
       // Medium Screen: 768px to 991px
       'tab-lg': { 'min': '768px', 'max': '991px' },
-      
+
       // Large Screen: 992px to 1024px
       'md-screen': { 'min': '992px', 'max': '1024px' },
-      
+
       // Desktop: 1025px to 1440px
       'lg-screen': { 'min': '1025px', 'max': '1440px' },
-      
+
       // Wide Screen: 1441px to 1920px
-      'xl-screen': { 'min': '1441px'},
+      'xl-screen': { 'min': '1441px' },
     },
     extend: {
       // 1. Color System (Simplified names)
@@ -74,6 +74,21 @@ module.exports = {
       // 6. Animation Logic
       transitionTimingFunction: {
         'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)', // Standard ease-in-out
+      },
+      animation: {
+        marquee: 'marquee 15s linear infinite',
+        marquee2: 'marquee2 15s linear infinite',
+
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        marquee2: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
       },
     },
   },

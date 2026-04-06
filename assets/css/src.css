@@ -54,5 +54,44 @@
         @apply text-banner-heading font-bold;
     }
 
+}
 
+@layer utilities {
+    .animate-marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee 15s linear infinite;
+    }
+    .animate-marquee2 {
+        display: flex;
+        width: max-content;
+        animation: marquee2 15s linear infinite;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+    @keyframes marquee2 {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    /* মাউস রাখলে এনিমেশন থামানোর জন্য (Optional) */
+    .pause-hover:hover .animate-marquee {
+        animation-play-state: paused;
+    }
+    .pause-hover:hover .animate-marquee2 {
+        animation-play-state: paused;
+    }
 }

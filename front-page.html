@@ -29,7 +29,7 @@
 
 </head>
 
-<body>
+<body class="relative">
 
     <!-- Inline SVG sprite — required for <use href="#id"> to work in all browsers/file:// -->
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none"
@@ -69,41 +69,47 @@
 
     </svg>
 
-    <header class="header p-5">
-        <div class="banner-section rounded-3xl">
-            <div class="w-full px-5 py-5">
-                <div class="flex justify-between items-center">
-                    <div class="header-left">
-                        <div class="logo">
-                            <a href="/front-page.html" class="w-48"><img src="./assets/images/logo.svg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="header-center ">
-                        <nav class="main-nav">
-                            <ul id="menu-main-menu" class="flex gap-1">
-                                <li class="menu-item"><a href="#" class="nav-item">About</a></li>
-                                <li class="menu-item"><a href="#" class="nav-item">Services</a></li>
-                                <li class="menu-item"><a href="#" class="nav-item">Blog</a></li>
-                                <li class="menu-item"><a href="#" class="nav-item">Faq</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-
-                    <div class="header-right">
-                        <a href="#" class="my-btn-primary">
-                            <span class="button-text text-white">Book a call</span>
-                            <span class="my-btn-primary-icon inline-flex" aria-hidden="true">
-                                <svg class="size-[11px]" width="11" height="11" focusable="false">
-                                    <use href="#icon-arrow-up-right" />
-                                </svg>
-                            </span>
-                        </a>
-
+    <header class="header w-full px-10 py-5  absolute top-5">
+        <div class="w-full">
+            <div class="flex justify-between items-center">
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="/front-page.html" class="w-48"><img src="./assets/images/logo.svg" alt=""></a>
                     </div>
                 </div>
+                <div class="header-center ">
+                    <nav class="main-nav">
+                        <ul id="menu-main-menu" class="flex gap-1">
+                            <li class="menu-item"><a href="#" class="nav-item">About</a></li>
+                            <li class="menu-item"><a href="#" class="nav-item">Services</a></li>
+                            <li class="menu-item"><a href="#" class="nav-item">Blog</a></li>
+                            <li class="menu-item"><a href="#" class="nav-item">Faq</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="header-right">
+                    <a href="#" class="my-btn-primary">
+                        <span class="button-text text-white">Book a call</span>
+                        <span class="my-btn-primary-icon inline-flex" aria-hidden="true">
+                            <svg class="size-[11px]" width="11" height="11" focusable="false">
+                                <use href="#icon-arrow-up-right" />
+                            </svg>
+                        </span>
+                    </a>
+
+                </div>
             </div>
-            <section class="h-full">
-                <div class="w-full flex gap-10 items-center px-20 flex-col tab-lg:flex-row">
+        </div>
+    </header>
+
+
+    <main class="main-content">
+
+        <!-- banner section start  -->
+        <section class="p-5">
+            <div class="h-full banner-section rounded-3xl pt-20">
+                <div class="w-full flex gap-10 items-center px-15 flex-col tab-lg:flex-row">
                     <div class="w-1/2 flex flex-col gap-13 items-start">
                         <a href="#" class="clutch-logo">
                             <div class="pb-4 border-b border-black">
@@ -133,10 +139,52 @@
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
-    </header>
-    <main class="main-content px-5">
+            </div>
+        </section>
+        <!-- banner section End  -->
+
+        <!-- Logo section start  -->
+       <section class="logo-section overflow-hidden"
+            style="background: linear-gradient(90deg, rgba(217,217,217,0.00) 1.53%, #C9C9C9 10.27%, #A6A6A6 88.53%, rgba(115,115,115,0.00) 98.58%);">
+
+            <div class="relative flex overflow-x-hidden pause-hover">
+
+                <!-- Strip 1 -->
+                <!-- <div class="animate-marquee whitespace-nowrap flex shrink-0 items-center gap-2">
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-1.svg"
+                            alt="Client Logo"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-2.svg"
+                            alt="Client Logo"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-3.svg"
+                            alt="Client Logo"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-4.svg"
+                            alt="Client Logo"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-5.svg"
+                            alt="Client Logo"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-6.svg"
+                            alt="Client Logo"></div>
+                </div> -->
+
+                <!-- Strip 2: no absolute, uses animate-marquee2 -->
+                <!-- <div class="animate-marquee2 whitespace-nowrap flex shrink-0 items-center gap-2 pl-2">
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-1.svg"
+                            alt="Client Logo"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-2.svg"
+                            alt="Client Logo"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-3.svg"
+                            alt="Client Logo"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-4.svg"
+                            alt="Client Logo"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-5.svg"
+                            alt="Client Logo"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-6.svg"
+                            alt="Client Logo"></div>
+                </div> -->
+
+            </div>
+        </section>
+
+        <!-- Logo section start  -->
 
 
 
