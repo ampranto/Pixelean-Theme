@@ -147,44 +147,47 @@
 
         <!-- Logo section start  -->
         <section class="logo-section w-full xxl-screen:w-[1880px] mx-auto overflow-hidden relative">
-            <div class="absolute inset-0 left-0 z-20 pointer-events-none w-30" style="background: linear-gradient(90deg,#F3F4F8 0%, #F3F4F830 100%);">
-            </div>
-            <div class="relative flex overflow-x-hidden pause-hover z-10">
-                <!-- Strip 1 -->
-                <div class="animate-marquee whitespace-nowrap flex shrink-0 items-center gap-2">
-                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-1.svg"
-                            alt="Client Logo"></div>
-                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-2.svg"
-                            alt="Client Logo"></div>
-                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-3.svg"
-                            alt="Client Logo"></div>
-                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-4.svg"
-                            alt="Client Logo"></div>
-                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-5.svg"
-                            alt="Client Logo"></div>
-                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-6.svg"
-                            alt="Client Logo"></div>
+
+            <!-- Left fade -->
+            <div class="absolute inset-0 left-0 z-20 pointer-events-none w-30"
+                style="background: linear-gradient(90deg,#F3F4F8 0%, #F3F4F830 100%);"></div>
+
+            <div class="marquee-track flex gap-2" id="marqueeTrack">
+
+                <!-- Group 1 -->
+                <div class="marquee-group flex gap-2" id="marqueeGroup">
+                    <!-- logos -->
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-1.svg"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-2.svg"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-3.svg"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-4.svg"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-5.svg"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-6.svg"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-1.svg"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-2.svg"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-3.svg"></div>
                 </div>
 
-                <!-- Strip 2: no absolute, uses animate-marquee2 -->
-                <div class="animate-marquee2 whitespace-nowrap flex shrink-0 items-center gap-2 pl-2">
-                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-1.svg"
-                            alt="Client Logo"></div>
-                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-2.svg"
-                            alt="Client Logo"></div>
-                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-3.svg"
-                            alt="Client Logo"></div>
-                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-4.svg"
-                            alt="Client Logo"></div>
-                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-5.svg"
-                            alt="Client Logo"></div>
-                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-6.svg"
-                            alt="Client Logo"></div>
+                <!-- Group 2 (duplicate) -->
+                <div class="marquee-group flex gap-2">
+                    <!-- same logos -->
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-4.svg"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-5.svg"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-6.svg"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-1.svg"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-2.svg"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-3.svg"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-4.svg"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-5.svg"></div>
+                    <div class="py-6 px-10 bg-white rounded-lg"><img class="h-8" src="./assets/images/logo-6.svg"></div>
                 </div>
 
             </div>
-            <div class="absolute inset-0 left-full -translate-x-full z-20 pointer-events-none w-30" style="background: linear-gradient(270deg,#F3F4F8 0%, #F3F4F830 100%);">
-            </div>
+
+            <!-- Right fade -->
+            <div class="absolute inset-0 left-full -translate-x-full z-20 pointer-events-none w-30"
+                style="background: linear-gradient(270deg,#F3F4F8 0%, #F3F4F830 100%);"></div>
+
         </section>
 
         <!-- Logo section start  -->
@@ -231,7 +234,20 @@
     </footer>
 
     <script type="module" src=""></script>
+    <script>
+        window.addEventListener("load", () => {
+            // code here
+            const track = document.getElementById("marqueeTrack");
+            const group = document.getElementById("marqueeGroup");
 
+            // get exact width of 1 group
+            const groupWidth = group.offsetWidth;
+
+            // set CSS variable dynamically
+            track.style.setProperty('--marquee-width', `${groupWidth}px`);
+        });
+
+    </script>
 </body>
 
 </html>
