@@ -23,7 +23,6 @@
   }
   
   .banner-section {
-    background-image: url("../images/banner-bg.png");
     background-position: start start;
     background-size: cover;
     background-repeat: no-repeat;

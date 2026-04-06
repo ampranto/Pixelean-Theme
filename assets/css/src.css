@@ -27,6 +27,7 @@
     --breakpoint-md-screen: 992px;
     --breakpoint-lg-screen: 1025px;
     --breakpoint-xl-screen: 1441px;
+    --breakpoint-xxl-screen: 1921px;
 }
 
 @layer components {
