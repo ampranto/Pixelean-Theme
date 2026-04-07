@@ -23,7 +23,31 @@
   }
   
   .banner-section {
-    background-position: start start;
+    background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  .colab-col{
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .colab-col::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(180deg, rgba(15, 21, 35, 0.00) 38.4%, rgba(15, 21, 35, 0.90) 81.76%);
+    border-radius: 16px;
+  }
+
+
+  .review-col::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: url('../images/logo-bg.png') no-repeat 220% 120%;
   }

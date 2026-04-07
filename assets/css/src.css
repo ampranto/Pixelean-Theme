@@ -4,6 +4,9 @@
     /* Custom Colors */
     --color-brand: #0248FF;
     --color-brand-hover: #0248FF;
+    --color-gray-2: #5F6779;
+    --color-gray-3: #B9BFCE;
+    --color-star: #FFAC37;
 
     /* Custom Spacing */
     --spacing-section: clamp(3rem, 6vw, 5rem);
@@ -32,19 +35,23 @@
 
 @layer components {
     .my-btn-primary {
-        @apply inline-flex items-center justify-center gap-4 bg-brand text-white px-4 py-3 border-2 border-brand rounded-lg no-underline transition-all duration-300 ease-smooth hover:bg-brand-hover active:scale-95 focus:outline-none focus:ring-4 focus:ring-brand/30;
+        @apply inline-flex items-center justify-center gap-4 bg-brand text-white px-4 py-3 border-2 border-brand rounded-lg no-underline transition-all duration-300 ease-linear hover:bg-white hover:text-black active:scale-95 focus:outline-none focus:ring-4 focus:ring-brand/30;
     }
 
     .my-btn-secondary {
-        @apply inline-flex items-center justify-center gap-4 border-2 border-brand bg-white text-black px-4 py-3 rounded-lg no-underline transition-all duration-300 ease-smooth hover:bg-brand-hover active:scale-95 focus:outline-none focus:ring-4 focus:ring-brand/30;
+        @apply inline-flex items-center justify-center gap-4 border-2 border-brand bg-white text-black px-4 py-3 rounded-lg no-underline transition-all duration-300 ease-linear hover:bg-brand hover:text-white active:scale-95 focus:outline-none focus:ring-4 focus:ring-brand/30;
     }
 
     .my-btn-primary-icon {
-        @apply p-2 rounded bg-white text-brand;
+        @apply p-2 rounded bg-white text-brand group-hover:bg-brand group-hover:text-white transition-all duration-300 ease-linear;
     }
 
     .my-btn-secondary-icon {
-        @apply p-2 rounded bg-brand text-white;
+        @apply p-2 rounded bg-brand text-white group-hover:bg-white group-hover:text-brand transition-all duration-300 ease-linear;
+    }
+
+    .my-btn-ghost {
+        @apply inline-flex items-center justify-center gap-4 text-black no-underline outline-0 transition-all duration-300 ease-linear;
     }
 
     .nav-item {
