@@ -41,11 +41,11 @@ module.exports = {
       fontFamily: {
         sans: ['Archivo', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
-
       // 3. Fluid typography (keep in sync with src/style.css @theme --text-*)
       fontSize: {
-        'banner-heading': ['clamp(2.5rem, 4vw + 1.25rem, 5.25rem)', { lineHeight: '1.1', fontWeight: '700' }],
-        'section-heading': ['clamp(2rem, 3vw + 1rem, 4rem)', { lineHeight: '1.2', fontWeight: '700' }],
+        'banner-heading': ['clamp(3rem, 4vw + 1.25rem, 5.25rem)', { lineHeight: '1.2', fontWeight: '700' }],
+        'section-heading': ['clamp(2.5rem, 3vw + 1rem, 4rem)', { lineHeight: '1.2', fontWeight: '600' }],
+        'section-heading-h3': ['clamp(2rem, 2.5vw + 1rem, 3rem)', { lineHeight: '1.4', fontWeight: '600' }],
         body: ['1rem', '1.5'],
       },
 

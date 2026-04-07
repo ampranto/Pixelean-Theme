@@ -11,6 +11,8 @@
     --spacing: 0.25rem;
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-4xl: 2.25rem;
@@ -22,6 +24,7 @@
     --font-weight-normal: 400;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --leading-normal: 1.5;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
@@ -35,8 +38,13 @@
     --color-gray-2: #5F6779;
     --color-gray-3: #B9BFCE;
     --color-star: #FFAC37;
-    --text-banner-heading: clamp(2.5rem, 4vw + 1.25rem, 5.25rem);
-    --text-banner-heading--line-height: 1.1;
+    --text-banner-heading: clamp(3rem, 4vw + 1.25rem, 5.25rem);
+    --text-banner-heading--line-height: 1.2;
+    --text-section-heading: clamp(2.5rem, 3vw + 1rem, 4rem);
+    --text-section-heading--line-height: 1.2;
+    --text-section-heading-h3: clamp(2rem, 2.5vw + 1rem, 3rem);
+    --text-section-heading-h3--line-height: 1.4;
+    --radius-pill: 9999px;
   }
 }
 @layer base {
@@ -242,6 +250,12 @@
   .z-20 {
     z-index: 20;
   }
+  .col-span-5 {
+    grid-column: span 5 / span 5;
+  }
+  .col-span-7 {
+    grid-column: span 7 / span 7;
+  }
   .container {
     width: 100%;
     @media (width >= 600px) {
@@ -287,6 +301,12 @@
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
   }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
   .-ml-3 {
     margin-left: calc(var(--spacing) * -3);
   }
@@ -302,14 +322,8 @@
   .table {
     display: table;
   }
-  .aspect-3\/4 {
-    aspect-ratio: 3/4;
-  }
   .aspect-4\/3 {
     aspect-ratio: 4/3;
-  }
-  .aspect-square {
-    aspect-ratio: 1 / 1;
   }
   .size-\[11px\] {
     width: 11px;
@@ -324,11 +338,11 @@
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
-  .h-auto {
-    height: auto;
-  }
   .h-full {
     height: 100%;
+  }
+  .h-px {
+    height: 1px;
   }
   .min-h-\[500px\] {
     min-height: 500px;
@@ -363,9 +377,6 @@
   .w-48 {
     width: calc(var(--spacing) * 48);
   }
-  .w-auto {
-    width: auto;
-  }
   .w-full {
     width: 100%;
   }
@@ -396,6 +407,9 @@
   .resize {
     resize: both;
   }
+  .grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
   .grid-cols-\[3\.5fr_5\.5fr_3fr\] {
     grid-template-columns: 3.5fr 5.5fr 3fr;
   }
@@ -420,6 +434,9 @@
   .justify-end {
     justify-content: flex-end;
   }
+  .justify-start {
+    justify-content: flex-start;
+  }
   .gap-0 {
     gap: calc(var(--spacing) * 0);
   }
@@ -437,6 +454,9 @@
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
@@ -459,6 +479,9 @@
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
+  .rounded-pill {
+    border-radius: var(--radius-pill);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -470,6 +493,12 @@
   .border-black {
     border-color: var(--color-black);
   }
+  .border-gray-3 {
+    border-color: var(--color-gray-3);
+  }
+  .bg-gray-3 {
+    background-color: var(--color-gray-3);
+  }
   .bg-white {
     background-color: var(--color-white);
   }
@@ -479,17 +508,23 @@
   .p-8 {
     padding: calc(var(--spacing) * 8);
   }
-  .p-50 {
-    padding: calc(var(--spacing) * 50);
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
   }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
+  }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
   }
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
   }
   .px-15 {
     padding-inline: calc(var(--spacing) * 15);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
   }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
@@ -508,6 +543,9 @@
   }
   .pb-50 {
     padding-bottom: calc(var(--spacing) * 50);
+  }
+  .text-center {
+    text-align: center;
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -528,6 +566,14 @@
   .text-base {
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .leading-normal {
+    --tw-leading: var(--leading-normal);
+    line-height: var(--leading-normal);
   }
   .font-normal {
     --tw-font-weight: var(--font-weight-normal);
@@ -561,11 +607,6 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
-  }
-  .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
@@ -767,6 +808,18 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .section-heading {
+    font-size: var(--text-section-heading);
+    line-height: var(--tw-leading, var(--text-section-heading--line-height));
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .section-heading-h3 {
+    font-size: var(--text-section-heading-h3);
+    line-height: var(--tw-leading, var(--text-section-heading-h3--line-height));
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
 }
 @layer utilities {
   .marquee-track {
@@ -828,6 +881,10 @@
   syntax: "*";
   inherits: false;
   initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-font-weight {
   syntax: "*";
@@ -938,6 +995,7 @@
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-border-style: solid;
+      --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-outline-style: solid;
       --tw-ease: initial;
