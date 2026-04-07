@@ -19,8 +19,8 @@ gsap.registerPlugin(ScrollTrigger);
 const tl = gsap.timeline({
     scrollTrigger: {
         trigger: ".video-section",
-        start: "top top",      // যখন সেকশনের টপ স্ক্রিনের টপে আসবে
-        end: "+=960",         // ২০০০ পিক্সেল স্ক্রল পর্যন্ত এনিমেশন চলবে
+        start: "top 30%",      // যখন সেকশনের টপ স্ক্রিনের টপে আসবে
+        end: "+=300%",         // ২০০০ পিক্সেল স্ক্রল পর্যন্ত এনিমেশন চলবে
         scrub: 1,              // স্ক্রল অনুযায়ী এনিমেশন আগাবে-পিছাবে
         pin: true,             // এনিমেশন শেষ না হওয়া পর্যন্ত সেকশন আটকে থাকবে
         anticipatePin: 1
@@ -31,17 +31,20 @@ const tl = gsap.timeline({
 tl.to(".video-wrapper", {
     width: "100%",      // ফুল উইডথ
     height: "100%",
+    y: "-30vh",
     ease: "none"
-}, "0") // "start" লেবেল দিলে সব এনিমেশন একসাথে শুরু হবে
+}, "start") // "start" লেবেল দিলে সব এনিমেশন একসাথে শুরু হবে
 
     .to(".text:first-child", {
-        x: 0,            // বামের টেক্সট বামে সরে যাবে
+        x: 0,
+        y: "-30vh",            // বামের টেক্সট বামে সরে যাবে
     }, "start")
 
     .to(".text:last-child", {
-        x: 0,             // ডানের টেক্সট ডানে সরে যাবে
+        x: 0,
+        y: "-30vh",            // ডানের টেক্সট ডানে সরে যাবে
     }, "start")
 
     .to(".video-section-container", {
         gap: 16,
-    }, "0");
+    }, "start");
