@@ -56,6 +56,10 @@
         @apply inline-flex items-center justify-center gap-4 text-black no-underline outline-0 transition-all duration-300 ease-linear;
     }
 
+    .my-btn-ghost-2 {
+        @apply inline-flex items-center justify-center gap-4 text-white no-underline outline-0 transition-all duration-300 ease-linear;
+    }
+
     .nav-item {
         @apply inline-flex items-center justify-center gap-4 bg-black py-4 px-6 rounded-xl text-white;
     }

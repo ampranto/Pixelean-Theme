@@ -6,6 +6,7 @@
     --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-sky-400: oklch(74.6% 0.16 232.661);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -307,6 +308,9 @@
   .mb-10 {
     margin-bottom: calc(var(--spacing) * 10);
   }
+  .mb-15 {
+    margin-bottom: calc(var(--spacing) * 15);
+  }
   .-ml-3 {
     margin-left: calc(var(--spacing) * -3);
   }
@@ -318,6 +322,9 @@
   }
   .inline-flex {
     display: inline-flex;
+  }
+  .list-item {
+    display: list-item;
   }
   .table {
     display: table;
@@ -352,6 +359,12 @@
   }
   .w-1\/2 {
     width: calc(1 / 2 * 100%);
+  }
+  .w-3 {
+    width: calc(var(--spacing) * 3);
+  }
+  .w-3\/5 {
+    width: calc(3 / 5 * 100%);
   }
   .w-5 {
     width: calc(var(--spacing) * 5);
@@ -404,8 +417,14 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .resize {
     resize: both;
+  }
+  .list-disc {
+    list-style-type: disc;
   }
   .grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -502,6 +521,9 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .object-cover {
+    object-fit: cover;
+  }
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
@@ -538,11 +560,20 @@
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
   }
+  .pb-0 {
+    padding-bottom: calc(var(--spacing) * 0);
+  }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
   }
   .pb-50 {
     padding-bottom: calc(var(--spacing) * 50);
+  }
+  .pl-4 {
+    padding-left: calc(var(--spacing) * 4);
+  }
+  .pl-5 {
+    padding-left: calc(var(--spacing) * 5);
   }
   .text-center {
     text-align: center;
@@ -608,9 +639,48 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
+  }
+  .marker\:text-brand {
+    & *::marker {
+      color: var(--color-brand);
+    }
+    &::marker {
+      color: var(--color-brand);
+    }
+    & *::-webkit-details-marker {
+      color: var(--color-brand);
+    }
+    &::-webkit-details-marker {
+      color: var(--color-brand);
+    }
+  }
+  .marker\:text-sky-400 {
+    & *::marker {
+      color: var(--color-sky-400);
+    }
+    &::marker {
+      color: var(--color-sky-400);
+    }
+    & *::-webkit-details-marker {
+      color: var(--color-sky-400);
+    }
+    &::-webkit-details-marker {
+      color: var(--color-sky-400);
+    }
+  }
+  .before\:absolute {
+    &::before {
+      content: var(--tw-content);
+      position: absolute;
+    }
   }
   .tab-lg\:flex-row {
     @media (width >= 768px) {
@@ -791,6 +861,23 @@
     --tw-ease: linear;
     transition-timing-function: linear;
   }
+  .my-btn-ghost-2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--spacing) * 4);
+    color: var(--color-white);
+    text-decoration-line: none;
+    outline-style: var(--tw-outline-style);
+    outline-width: 0px;
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+    --tw-ease: linear;
+    transition-timing-function: linear;
+  }
   .nav-item {
     display: inline-flex;
     align-items: center;
@@ -899,6 +986,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-content {
+  syntax: "*";
+  initial-value: "";
+  inherits: false;
+}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -999,6 +1091,7 @@
       --tw-font-weight: initial;
       --tw-outline-style: solid;
       --tw-ease: initial;
+      --tw-content: "";
       --tw-duration: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
