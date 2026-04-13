@@ -48,3 +48,35 @@ tl.to(".video-wrapper", {
     .to(".video-section-container", {
         gap: 16,
     }, "start");
+
+
+
+const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1, // দুই পাশের স্লাইড আংশিক দেখানোর জন্য
+    centeredSlides: true,
+    spaceBetween: 16,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 2 }, // বড় স্ক্রিনে আরও ভালো লুক দিবে
+    },
+});
+
+const text = document.getElementById('circleText');
+let angle = 0;
+
+function rotate() {
+    angle = (angle + 0.5) % 360; // 0.5 = speed
+    text.setAttribute('transform', `rotate(${angle}, 100, 100)`);
+    requestAnimationFrame(rotate);
+}
+
+rotate();
+
+// hover এ slow
+document.querySelector('.circle-btn').addEventListener('mouseenter', () => speed = 0.1);
+document.querySelector('.circle-btn').addEventListener('mouseleave', () => speed = 0.5);

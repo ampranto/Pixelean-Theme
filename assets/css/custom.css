@@ -92,3 +92,19 @@ body {
   border-radius: 100%;
   background-color: var(--color-brand);
 }
+
+.circle-btn {
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* CSS only দিয়েও spin করা যায় */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+#circleText {
+  transform-origin: 100px 100px; /* SVG center */
+  animation: spin 8s linear infinite;
+}

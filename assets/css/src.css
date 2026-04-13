@@ -16,10 +16,10 @@
     /* Fluid type (Tailwind v4: define here so text-* utilities exist) */
     --text-banner-heading: clamp(3rem, 4vw + 1.25rem, 5.25rem);
     --text-banner-heading--line-height: 1.2;
-    --text-section-heading: clamp(2.5rem, 3vw + 1rem, 4rem);
+    --text-section-heading: clamp(2.5rem, 1.43rem + 2.86vw, 4rem);
     --text-section-heading--line-height: 1.2;
     --text-section-heading-h3: clamp(2rem, 2.5vw + 1rem, 3rem);
-    --text-section-heading-h3--line-height:1.4;
+    --text-section-heading-h3--line-height: 1.4;
     --text-body: 1rem;
     --text-body--line-height: 1.5;
     /* Match tailwind.config.js theme.extend */
@@ -67,10 +67,12 @@
     .banner-heading {
         @apply text-banner-heading font-bold;
     }
-    .section-heading{
+
+    .section-heading {
         @apply text-section-heading font-semibold;
     }
-    .section-heading-h3{
+
+    .section-heading-h3 {
         @apply text-section-heading-h3 font-semibold;
     }
 
@@ -105,4 +107,45 @@
             transform: translateX(calc(-1 * var(--marquee-width)));
         }
     }
+
+    .spin-slow {
+        animation: spin 10s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+
+/* Active slide opacity and scale */
+.swiper-slide-active {
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: rgba(255, 255, 255, 0.3) !important;
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+}
+
+/* Pagination ডট কাস্টমাইজেশন (আপনার ইমেজের নীল ডটের মতো) */
+.swiper-pagination-bullet-active {
+    background: var(--color-brand) !important;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+}
+
+.swiper-slide {
+    width: calc(100% - 120px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.5;
 }

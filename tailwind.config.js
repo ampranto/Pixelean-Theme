@@ -76,8 +76,9 @@ module.exports = {
         'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)', // Standard ease-in-out
       },
       animation: {
-        marquee: 'marquee 15s linear infinite',
-        marquee2: 'marquee2 15s linear infinite',
+        'marquee': 'marquee 15s linear infinite',
+        'marquee2': 'marquee2 15s linear infinite',
+        'spin-slow': 'spin 10s linear infinite',
 
       },
       keyframes: {
