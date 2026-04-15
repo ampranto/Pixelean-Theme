@@ -37,19 +37,19 @@
 
 @layer components {
     .my-btn-primary {
-        @apply inline-flex items-center justify-center gap-4 bg-brand text-white px-4 py-3 border-2 border-brand rounded-lg no-underline transition-all duration-300 ease-linear  active:scale-95 focus:outline-none focus:ring-4 focus:ring-brand/30;
+        @apply inline-flex items-center justify-center gap-4 bg-brand text-white px-4 py-3 border-2 border-brand rounded-lg no-underline transition-all duration-300 ease-linear active:scale-95 focus:outline-none focus:ring-4 focus:ring-brand/30;
     }
 
     .my-btn-secondary {
-        @apply inline-flex items-center justify-center gap-4 border-2 border-brand bg-white text-black px-4 py-3 rounded-lg no-underline transition-all duration-300 ease-linear  active:scale-95 focus:outline-none focus:ring-4 focus:ring-brand/30;
+        @apply inline-flex items-center justify-center gap-4 border-2 border-brand bg-white text-black px-4 py-3 rounded-lg no-underline transition-all duration-300 ease-linear active:scale-95 focus:outline-none focus:ring-4 focus:ring-brand/30;
     }
 
     .my-btn-primary-icon {
-        @apply p-2 rounded bg-white text-brand  transition-all duration-300 ease-linear;
+        @apply p-2 rounded bg-white text-brand transition-all duration-300 ease-linear;
     }
 
     .my-btn-secondary-icon {
-        @apply p-2 rounded bg-brand text-white  transition-all duration-300 ease-linear;
+        @apply p-2 rounded bg-brand text-white transition-all duration-300 ease-linear;
     }
 
     .my-btn-ghost {
@@ -141,7 +141,7 @@
     background: var(--color-brand) !important;
     width: 16px;
     height: 16px;
-    border-radius: 50px;
+    border-radius: 50px; 
 }
 
 .swiper-slide {
