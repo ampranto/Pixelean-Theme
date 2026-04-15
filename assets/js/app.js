@@ -85,17 +85,28 @@ document.querySelector('.circle-btn').addEventListener('mouseleave', () => speed
 
 
 
-function toggle(id, activeClass) {
-    const el = document.getElementById(id);
-    const pill = document.getElementById(id + '-pill');
-    const isOn = el.classList.contains(activeClass);
-    if (isOn) {
-        el.classList.remove(activeClass);
-        pill.classList.remove('active');
-        pill.textContent = 'Off';
-    } else {
-        el.classList.add(activeClass);
-        pill.classList.add('active');
-        pill.textContent = 'On';
-    }
+
+function initAllPricingCards() {
+    document.querySelectorAll('[data-pricing-card]').forEach(card => {
+        const toggle = card.querySelector('.pricing-toggle');
+        if (!toggle) return;
+
+        const priceEls = card.querySelectorAll('.dev-price');
+
+        function updatePrices(isDevMode) {
+            card.classList.toggle('dev-active', isDevMode);
+            priceEls.forEach(el => {
+                el.innerText = isDevMode
+                    ? (el.dataset.priceDev     ?? el.innerText)
+                    : (el.dataset.priceDefault ?? el.innerText);
+            });
+        }
+
+        updatePrices(toggle.checked); // sync initial state
+        toggle.addEventListener('change', function () {
+            updatePrices(this.checked);
+        });
+    });
 }
+
+initAllPricingCards();

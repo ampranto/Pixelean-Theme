@@ -93,6 +93,21 @@ body {
   background-color: var(--color-brand);
 }
 
+/* ── Pricing: Dev-only list items  */
+[data-dev-only] {
+    display: none;
+}
+
+.dev-active [data-dev-only] {
+    display: list-item;
+    animation: fadeInItem 0.35s ease both;
+}
+
+@keyframes fadeInItem {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
 .circle-btn {
   cursor: pointer;
   display: inline-block;

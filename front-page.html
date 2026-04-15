@@ -867,7 +867,7 @@
                 </div>
                 <div class="section-body">
                     <div class="flex gap-4 mb-4">
-                        <div class="pricing-table-card rounded-2xl bg-white w-full">
+                        <div class="pricing-table-card rounded-2xl bg-white w-full" data-pricing-card>
                             <div class="pricing-table-card-header p-15">
                                 <div class=" flex items-center justify-between">
                                     <div class="pricing-title-section">
@@ -875,14 +875,15 @@
                                             class="pricing-title text-section-heading-h4 font-semibold text-black leading-[1.6]">
                                             Website Design</h3>
                                         <p class="pricing-desc text-gray-2 text-[22px]">Ideal for Startup Owners,
-                                            MVP Builders</p>
+                                            MVP Builders</p>
                                     </div>
                                     <div class="dev-mode text-lg leading-[1.2] font-semibold">
                                         <label class="flex items-center gap-3 cursor-pointer group">
                                             <span class="font-semibold text-lg select-none">Dev</span>
 
                                             <div class="relative">
-                                                <input type="checkbox" class="sr-only peer" />
+                                                <input type="checkbox" id="devToggle1"
+                                                    class="sr-only peer pricing-toggle" />
 
                                                 <div
                                                     class="w-14 h-7 bg-gray-300 rounded-full transition-colors duration-300 ease-in-out peer-checked:bg-blue-600">
@@ -903,7 +904,8 @@
                                     <div class="pricing-table-price-container flex flex-col gap-3 items-start">
                                         <div class="pricing-table-price flex gap-2">
                                             <span class="font-normal text-[32px]">$</span>
-                                            <h3 class="section-heading-h3">1800</h3>
+                                            <h3 class="section-heading-h3 dev-price" data-price-default="1800"
+                                                data-price-dev="2500">1800</h3>
                                         </div>
                                         <a href="#" class="my-btn-primary group">
                                             <span class="button-text">Get started now</span>
@@ -952,13 +954,22 @@
                                         <li
                                             class="text-xl leading-normal font-normal text-black list-item relative pl-5 w-full">
                                             Responsive Design</li>
+                                        <li data-dev-only
+                                            class="text-xl leading-normal font-normal text-black list-item relative pl-5 w-full">
+                                            Frontend Development</li>
+                                        <li data-dev-only
+                                            class="text-xl leading-normal font-normal text-black list-item relative pl-5 w-full">
+                                            Backend API Integration</li>
+                                        <li data-dev-only
+                                            class="text-xl leading-normal font-normal text-black list-item relative pl-5 w-full">
+                                            Deployment & Hosting Setup</li>
                                     </ul>
 
                                 </div>
                             </div>
                         </div>
 
-                        <div class="pricing-table-card rounded-2xl bg-white w-full">
+                        <div class="pricing-table-card rounded-2xl bg-white w-full" data-pricing-card>
                             <div class="pricing-table-card-header p-15">
                                 <div class=" flex items-center justify-between">
                                     <div class="pricing-title-section">
@@ -973,7 +984,8 @@
                                             <span class="font-semibold text-lg select-none">Dev</span>
 
                                             <div class="relative">
-                                                <input type="checkbox" class="sr-only peer" />
+                                                <input type="checkbox" id="devToggle2"
+                                                    class="sr-only peer pricing-toggle" />
 
                                                 <div
                                                     class="w-14 h-7 bg-gray-300 rounded-full transition-colors duration-300 ease-in-out peer-checked:bg-blue-600">
@@ -994,7 +1006,8 @@
                                     <div class="pricing-table-price-container flex flex-col gap-3 items-start">
                                         <div class="pricing-table-price flex gap-2">
                                             <span class="font-normal text-[32px]">$</span>
-                                            <h3 class="section-heading-h3">3500</h3>
+                                            <h3 class="section-heading-h3 dev-price" data-price-default="3500"
+                                                data-price-dev="5000">3500</h3>
                                         </div>
                                         <a href="#" class="my-btn-primary group">
                                             <span class="button-text">Get started now</span>
@@ -1040,9 +1053,18 @@
                                         <li
                                             class="text-xl leading-normal font-normal text-black list-item relative pl-5 w-full">
                                             Design System Basics</li>
-                                        <li
+                                        <li data-dev-only
                                             class="text-xl leading-normal font-normal text-black list-item relative pl-5 w-full">
                                             Responsive Design</li>
+                                        <li data-dev-only
+                                            class="text-xl leading-normal font-normal text-black list-item relative pl-5 w-full">
+                                            Dev Design</li>
+                                        <li data-dev-only
+                                            class="text-xl leading-normal font-normal text-black list-item relative pl-5 w-full">
+                                            Dev Design</li>
+                                        <li data-dev-only
+                                            class="text-xl leading-normal font-normal text-black list-item relative pl-5 w-full">
+                                            Dev Design</li>
                                     </ul>
 
                                 </div>
@@ -1085,7 +1107,8 @@
                             </div>
                         </div>
                         <div class="p-5 pl-0 w-1/3">
-                            <div class="p-15 h-full rounded-sm flex items-end bg-[url(../images/subscription-bg.png)] bg-cover bg-top bg-no-repeat">
+                            <div
+                                class="p-15 h-full rounded-sm flex items-end bg-[url(../images/subscription-bg.png)] bg-cover bg-top bg-no-repeat">
                                 <div class="pricing-table-price-container flex flex-col gap-3 w-full">
                                     <div class="pricing-table-price flex gap-2">
                                         <span class="font-normal text-[32px]">$</span>
