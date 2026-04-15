@@ -80,3 +80,22 @@ rotate();
 // hover এ slow
 document.querySelector('.circle-btn').addEventListener('mouseenter', () => speed = 0.1);
 document.querySelector('.circle-btn').addEventListener('mouseleave', () => speed = 0.5);
+
+
+
+
+
+function toggle(id, activeClass) {
+    const el = document.getElementById(id);
+    const pill = document.getElementById(id + '-pill');
+    const isOn = el.classList.contains(activeClass);
+    if (isOn) {
+        el.classList.remove(activeClass);
+        pill.classList.remove('active');
+        pill.textContent = 'Off';
+    } else {
+        el.classList.add(activeClass);
+        pill.classList.add('active');
+        pill.textContent = 'On';
+    }
+}

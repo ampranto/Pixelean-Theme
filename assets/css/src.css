@@ -6,6 +6,7 @@
     --color-brand-hover: #0248FF;
     --color-gray-2: #5F6779;
     --color-gray-3: #B9BFCE;
+    --color-gray-4: #F3F4F8;
     --color-star: #FFAC37;
 
     /* Custom Spacing */
@@ -20,6 +21,8 @@
     --text-section-heading--line-height: 1.2;
     --text-section-heading-h3: clamp(2rem, 2.5vw + 1rem, 3rem);
     --text-section-heading-h3--line-height: 1.4;
+    --text-section-heading-h4: clamp(1.5rem, 1.5vw + 1rem, 2.5rem);
+    --text-section-heading-h4--line-height: 1.4;
     --text-body: 1rem;
     --text-body--line-height: 1.5;
     /* Match tailwind.config.js theme.extend */
@@ -37,11 +40,11 @@
 
 @layer components {
     .my-btn-primary {
-        @apply inline-flex items-center justify-center gap-4 bg-brand text-white px-4 py-3 border-2 border-brand rounded-lg no-underline transition-all duration-300 ease-linear active:scale-95 focus:outline-none focus:ring-4 focus:ring-brand/30;
+        @apply inline-flex items-center text-lg font-semibold justify-center gap-4 bg-brand text-white px-4 py-3 border-2 border-brand rounded-lg no-underline transition-all duration-300 ease-linear active:scale-95 focus:outline-none focus:ring-4 focus:ring-brand/30;
     }
 
     .my-btn-secondary {
-        @apply inline-flex items-center justify-center gap-4 border-2 border-brand bg-white text-black px-4 py-3 rounded-lg no-underline transition-all duration-300 ease-linear active:scale-95 focus:outline-none focus:ring-4 focus:ring-brand/30;
+        @apply inline-flex items-center text-lg font-semibold justify-center gap-4 border-2 border-brand bg-white text-black px-4 py-3 rounded-lg no-underline transition-all duration-300 ease-linear active:scale-95 focus:outline-none focus:ring-4 focus:ring-brand/30;
     }
 
     .my-btn-primary-icon {
@@ -53,11 +56,11 @@
     }
 
     .my-btn-ghost {
-        @apply inline-flex items-center justify-center gap-4 text-black no-underline outline-0 transition-all duration-300 ease-linear;
+        @apply inline-flex items-center text-lg font-semibold justify-center gap-4 text-black no-underline outline-0 transition-all duration-300 ease-linear;
     }
 
     .my-btn-ghost-2 {
-        @apply inline-flex items-center justify-center gap-4 text-white no-underline outline-0 transition-all duration-300 ease-linear;
+        @apply inline-flex items-center text-lg font-semibold justify-center gap-4 text-white no-underline outline-0 transition-all duration-300 ease-linear;
     }
 
     .nav-item {
