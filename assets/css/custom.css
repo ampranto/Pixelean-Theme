@@ -93,6 +93,36 @@ body {
   background-color: var(--color-brand);
 }
 
+
+
+/* Active slide opacity and scale */
+.swiper-slide-active {
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.4) !important;
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+}
+
+/* Pagination ডট কাস্টমাইজেশন (আপনার ইমেজের নীল ডটের মতো) */
+.swiper-pagination-bullet-active {
+  background: var(--color-brand) !important;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px; 
+}
+
+.swiper-slide {
+  width: calc(100% - 120px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.5;
+}
+
+  
+
 /* ── Pricing: Dev-only list items  */
 [data-dev-only] {
     display: none;
@@ -122,4 +152,11 @@ body {
 #circleText {
   transform-origin: 100px 100px; /* SVG center */
   animation: spin 8s linear infinite;
+}
+
+
+.swiper-pagination {
+  display: flex;
+    justify-content: center;
+    align-items: center;
 }
