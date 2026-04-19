@@ -23,6 +23,8 @@
     --text-section-heading-h3--line-height: 1.4;
     --text-section-heading-h4: clamp(1.5rem, 1.5vw + 1rem, 2.5rem);
     --text-section-heading-h4--line-height: 1.4;
+    --text-section-heading-h5: clamp(1.25rem, 0.94vw + 1rem, 2rem);
+    --text-section-heading-h5--line-height: 1.2;
     --text-body: 1rem;
     --text-body--line-height: 1.5;
     /* Match tailwind.config.js theme.extend */
@@ -48,7 +50,7 @@
     }
 
     .my-btn-primary-icon {
-        @apply p-2 rounded bg-white text-brand transition-all duration-300 ease-linear;
+        @apply p-2 rounded bg-white text-brand group-hover:bg-brand group-hover:text-white transition-all duration-300 ease-linear;
     }
 
     .my-btn-secondary-icon {
