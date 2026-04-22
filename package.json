@@ -10,6 +10,7 @@
         "tailwindcss": "^4.2.2"
     },
     "dependencies": {
-        "@tailwindcss/cli": "^4.2.2"
+        "@tailwindcss/cli": "^4.2.2",
+        "boneyard-js": "^1.7.7"
     }
 }
