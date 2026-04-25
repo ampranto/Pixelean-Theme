@@ -81,6 +81,10 @@
   .section-heading-h3 {
     @apply text-section-heading-h3 font-semibold;
   }
+
+  .section-heading-h4 {
+    @apply text-section-heading-h4 font-semibold;
+  }
 }
 
 @layer utilities {
