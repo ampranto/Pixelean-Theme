@@ -1,9 +1,8 @@
-@import url('_effects.css');
-@import url('animate.css');
-
+@import url("_effects.css");
+@import url("animate.css");
 
 :root {
-  background-color: #F3F4F8;
+  background-color: #f3f4f8;
 }
 
 body {
@@ -40,17 +39,20 @@ body {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(180deg, rgba(15, 21, 35, 0.00) 38.4%, rgba(15, 21, 35, 0.90) 81.76%);
+  background: linear-gradient(
+    180deg,
+    rgba(15, 21, 35, 0) 38.4%,
+    rgba(15, 21, 35, 0.9) 81.76%
+  );
   border-radius: 16px;
 }
-
 
 .review-col::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: url('../images/logo-bg.png') no-repeat 220% 120%;
+  background: url("../images/logo-bg.png") no-repeat 220% 120%;
 }
 
 /* .section-video-scroll{
@@ -93,8 +95,6 @@ body {
   background-color: var(--color-brand);
 }
 
-
-
 /* Active slide opacity and scale */
 .swiper-slide-active {
   opacity: 1 !important;
@@ -112,30 +112,36 @@ body {
   background: var(--color-brand) !important;
   width: 16px;
   height: 16px;
-  border-radius: 50px; 
+  border-radius: 50px;
 }
 
 .swiper-slide {
   width: calc(100% - 120px);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
   opacity: 0.5;
 }
 
-  
-
 /* ── Pricing: Dev-only list items  */
 [data-dev-only] {
-    display: none;
+  display: none;
 }
 
 .dev-active [data-dev-only] {
-    display: list-item;
-    animation: fadeInItem 0.35s ease both;
+  display: list-item;
+  animation: fadeInItem 0.35s ease both;
 }
 
 @keyframes fadeInItem {
-    from { opacity: 0; transform: translateY(-6px); }
-    to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .circle-btn {
@@ -145,8 +151,12 @@ body {
 
 /* CSS only দিয়েও spin করা যায় */
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #circleText {
@@ -154,9 +164,37 @@ body {
   animation: spin 8s linear infinite;
 }
 
-
 .swiper-pagination {
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  text-align: center;
+  padding: 20px;
+}
+.wrap svg {
+  overflow: visible;
+}
+
+.matter-container {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  touch-action: none; /* মোবাইল স্ক্রলিং ইস্যু ফিক্স করবে */
+}
+.pill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; /* শুরুতে লুকানো */
+  will-change: transform;
+  user-select: none;
+  white-space: nowrap;
+  cursor: grab;
+}
+.pill:active {
+  cursor: grabbing;
 }
